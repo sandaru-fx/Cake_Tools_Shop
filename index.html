@@ -16,29 +16,22 @@
     <!-- 1. Navbar -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <i class="fas fa-birthday-cake"></i>
                 Cake<span>Craft</span>
             </a>
             
             <ul class="nav-links">
                 <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#shop" class="nav-link">Shop Tools</a></li>
-                <li><a href="#categories" class="nav-link">Categories</a></li>
-                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#about" class="nav-link">Features</a></li>
+                <li><a href="#footer" class="nav-link">Contact</a></li>
             </ul>
             
             <div class="nav-actions">
-                <button class="icon-btn" aria-label="Search">
-                    <i class="fas fa-search"></i>
-                </button>
                 <button class="icon-btn" id="theme-toggle" aria-label="Toggle Dark Mode">
                     <i class="fas fa-moon"></i>
                 </button>
-                <button class="icon-btn" aria-label="Cart">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-badge">0</span>
-                </button>
+                <a href="login.html" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.9rem;">Sign In</a>
                 <button class="hamburger" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -53,8 +46,8 @@
                 <h1>Bake Your <span>Masterpiece</span></h1>
                 <p>Equip your kitchen with premium, professional-grade cake baking and decorating tools. From flawless batters to stunning piping designs.</p>
                 <div class="hero-actions">
-                    <a href="#shop" class="btn btn-primary">Shop Collection <i class="fas fa-arrow-right"></i></a>
-                    <a href="#categories" class="btn btn-outline">Explore Categories</a>
+                    <a href="login.html" class="btn btn-primary">Get Started <i class="fas fa-arrow-right"></i></a>
+                    <a href="login.html" class="btn btn-outline">Login to Account</a>
                 </div>
             </div>
             <div class="hero-image-wrapper fade-up" style="transition-delay: 0.2s;">
@@ -94,125 +87,11 @@
         </div>
     </section>
 
-    <!-- 4. Categories Layout -->
-    <section id="categories" class="categories">
-        <div class="container">
-            <h2 class="section-title fade-up">Shop by Category</h2>
-            <p class="section-subtitle fade-up">Everything you need from the first mix to the final decorative flourish.</p>
-            
-            <div class="bento-grid">
-                <!-- Large Card -->
-                <div class="bento-card bento-large fade-up">
-                    <img src="assets/images/cat_decor.png" alt="Decorating Tools">
-                    <div class="bento-overlay">
-                        <h3>Decorating & Finishing</h3>
-                        <p>Piping bags, nozzles, turntables, palette knives, and levelers.</p>
-                        <a href="#">Explore Decorating <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <!-- Small Card 1 -->
-                <div class="bento-card bento-small fade-up" style="transition-delay: 0.2s;">
-                    <img src="assets/images/cat_basic.png" alt="Basic Tools">
-                    <div class="bento-overlay">
-                        <h3>Basic Tools</h3>
-                        <p>Mixing bowls, measuring cups, pans, and whisks.</p>
-                        <a href="#">Shop Basics <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <!-- Small Card 2 -->
-                <div class="bento-card bento-small fade-up" style="transition-delay: 0.4s;">
-                    <img src="assets/images/cat_pro.png" alt="Professional Essentials">
-                    <div class="bento-overlay">
-                        <h3>Pro Essentials</h3>
-                        <p>Stand mixers, digital scales, and advanced equipment.</p>
-                        <a href="#">Shop Pro Gear <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. Featured Products -->
-    <section id="shop" class="products">
-        <div class="container">
-            <h2 class="section-title fade-up">Bestselling Tools</h2>
-            <p class="section-subtitle fade-up">Our community's favorite baking essentials.</p>
-            
-            <div class="product-grid">
-                <!-- Product 1 -->
-                <div class="product-card fade-up">
-                    <span class="product-badge">Bestseller</span>
-                    <button class="wishlist-btn"><i class="far fa-heart"></i></button>
-                    <img src="assets/images/prod_1.png" alt="Silicone Spatula Set" class="product-img">
-                    <div class="product-info">
-                        <div class="stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                            <span>(128)</span>
-                        </div>
-                        <h4 class="product-title">Premium 6-Pc Spatula Set</h4>
-                        <div class="product-price">Rs. 3,500 <del>Rs. 4,200</del></div>
-                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
-                    </div>
-                </div>
-                
-                <!-- Product 2 -->
-                <div class="product-card fade-up" style="transition-delay: 0.1s;">
-                    <button class="wishlist-btn"><i class="far fa-heart"></i></button>
-                    <img src="assets/images/prod_2.png" alt="Springform Pan" class="product-img">
-                    <div class="product-info">
-                        <div class="stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <span>(95)</span>
-                        </div>
-                        <h4 class="product-title">Non-stick Springform Pan</h4>
-                        <div class="product-price">Rs. 2,800</div>
-                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
-                    </div>
-                </div>
-                
-                <!-- Product 3 -->
-                <div class="product-card fade-up" style="transition-delay: 0.2s;">
-                    <span class="product-badge" style="background-color: #4A3B32;">Pro Series</span>
-                    <button class="wishlist-btn"><i class="far fa-heart"></i></button>
-                    <img src="assets/images/prod_3.png" alt="Digital Kitchen Scale" class="product-img">
-                    <div class="product-info">
-                        <div class="stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                            <span>(210)</span>
-                        </div>
-                        <h4 class="product-title">Digital Kitchen Scale (Glass)</h4>
-                        <div class="product-price">Rs. 4,500 <del>Rs. 5,000</del></div>
-                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
-                    </div>
-                </div>
-                
-                <!-- Product 4 -->
-                <div class="product-card fade-up" style="transition-delay: 0.3s;">
-                    <button class="wishlist-btn"><i class="far fa-heart"></i></button>
-                    <img src="assets/images/prod_4.png" alt="Piping Nozzle Kit" class="product-img">
-                    <div class="product-info">
-                        <div class="stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                            <span>(64)</span>
-                        </div>
-                        <h4 class="product-title">50-Pc Piping Nozzle Kit</h4>
-                        <div class="product-price">Rs. 5,200</div>
-                        <button class="add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 50px;" class="fade-up">
-                <a href="#" class="btn btn-outline">View All Products <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. Features Section -->
+    <!-- 4. Features Section -->
     <section id="about" class="features">
         <div class="container">
+            <h2 class="section-title fade-up">Why Choose CakeCraft?</h2>
+            <p class="section-subtitle fade-up">The ultimate destination for professional baking tools.</p>
             <div class="features-grid">
                 <div class="feature-card fade-up">
                     <div class="feature-icon"><i class="fas fa-award"></i></div>
@@ -238,38 +117,22 @@
         </div>
     </section>
 
-    <!-- 7. Promo Banner -->
+    <!-- 5. Promo Banner -->
     <section class="promo">
         <div class="container fade-up">
             <h2>Start Your Baking Journey Today</h2>
             <p>Get 20% OFF your first order of complete baking sets.</p>
             <div class="promo-code">FIRSTBAKE20</div><br>
-            <a href="#shop" class="btn btn-primary">Claim Offer Now</a>
+            <a href="login.html" class="btn btn-primary">Create Account to Claim</a>
         </div>
     </section>
 
-    <!-- 8. Newsletter -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-box fade-up">
-                <div class="nl-content">
-                    <h2>Join the CakeCraft Family</h2>
-                    <p>Subscribe to receive exclusive deals, new arrival alerts, and professional baking tips directly to your inbox.</p>
-                </div>
-                <form class="nl-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
-                    <input type="email" placeholder="Enter your email address" required>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- 9. Footer -->
-    <footer class="footer">
+    <!-- 6. Footer -->
+    <footer id="footer" class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="#" class="logo" style="margin-bottom: 20px;">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px;">
                         <i class="fas fa-birthday-cake"></i> Cake<span>Craft</span>
                     </a>
                     <p>Providing premium, professional-grade baking tools to home bakers and professional pastry chefs alike.</p>
@@ -285,9 +148,8 @@
                     <h4>Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#shop">Shop</a></li>
-                        <li><a href="#categories">Categories</a></li>
-                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#about">Features</a></li>
+                        <li><a href="login.html">Login</a></li>
                     </ul>
                 </div>
                 
@@ -297,7 +159,6 @@
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Shipping Policy</a></li>
                         <li><a href="#">Returns & Refunds</a></li>
-                        <li><a href="#">Track Order</a></li>
                     </ul>
                 </div>
                 
@@ -307,7 +168,6 @@
                         <li><i class="fas fa-map-marker-alt"></i> No 123, Bakery Lane, Colombo 05</li>
                         <li><i class="fas fa-phone"></i> +94 11 234 5678</li>
                         <li><i class="fas fa-envelope"></i> hello@cakecraft.lk</li>
-                        <li><i class="far fa-clock"></i> Mon-Sat: 9AM - 6PM</li>
                     </ul>
                 </div>
             </div>

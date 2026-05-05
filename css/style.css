@@ -932,3 +932,21 @@ img {
   .features-grid { grid-template-columns: 1fr; }
   .nl-form { flex-direction: column; }
 }
+
+/* 10. Auth Page */
+.auth-page { display: flex; min-height: 100vh; background-color: var(--bg-color); }
+.auth-left { flex: 1; background: linear-gradient(rgba(45, 36, 33, 0.4), rgba(45, 36, 33, 0.6)), url('../assets/images/hero_baking.png') center/cover; display: none; }
+.auth-right { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px; }
+.auth-box { width: 100%; max-width: 480px; padding: 50px; border-radius: var(--radius-lg); }
+.auth-box h2 { font-size: 2rem; margin-bottom: 10px; }
+.auth-box p { color: var(--text-muted); margin-bottom: 30px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
+.form-group input { width: 100%; padding: 14px 20px; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--surface); color: var(--text-main); font-family: var(--font-body); transition: var(--transition); }
+.form-group input:focus { border-color: var(--primary); outline: none; }
+.auth-options { display: flex; justify-content: space-between; margin-bottom: 30px; font-size: 0.9rem; }
+.auth-options a { color: var(--primary); font-weight: 500; }
+.auth-btn { width: 100%; }
+.auth-footer { text-align: center; margin-top: 30px; font-size: 0.95rem; }
+.auth-footer a { color: var(--primary); font-weight: 600; }
+@media (min-width: 900px) { .auth-left { display: block; } }

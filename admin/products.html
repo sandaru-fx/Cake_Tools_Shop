@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | CakeCraft Admin</title>
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Admin Specific Styles -->
+    <link rel="stylesheet" href="css/admin.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <i class="fas fa-birthday-cake"></i> Cake<span>Admin</span>
+            </a>
+        </div>
+        <div class="sidebar-menu">
+            <a href="index.html" class="menu-item">
+                <i class="fas fa-home"></i> Dashboard
+            </a>
+            <a href="products.html" class="menu-item active">
+                <i class="fas fa-box-open"></i> Products
+            </a>
+            <a href="#" class="menu-item">
+                <i class="fas fa-shopping-bag"></i> Orders
+            </a>
+            <a href="#" class="menu-item">
+                <i class="fas fa-users"></i> Customers
+            </a>
+            <a href="#" class="menu-item" style="margin-top: 40px;">
+                <i class="fas fa-cog"></i> Settings
+            </a>
+            <a href="../login.html" class="menu-item">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="search-bar">
+                <i class="fas fa-search text-muted"></i>
+                <input type="text" placeholder="Search products...">
+            </div>
+            <div class="topbar-actions">
+                <div class="profile-circle">A</div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">Products Inventory</h1>
+                    <p style="color: var(--text-muted);">Manage your baking tools and equipment catalog.</p>
+                </div>
+                <button class="btn btn-primary" id="openAddProductModal"><i class="fas fa-plus"></i> Add New Product</button>
+            </div>
+
+            <!-- Products Table -->
+            <div class="admin-card fade-up">
+                <div class="table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Category</th>
+                                <th>Price (Rs)</th>
+                                <th>Stock</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="product-cell">
+                                        <img src="../assets/images/prod_1.png" alt="Spatula">
+                                        <strong>Premium 6-Pc Spatula Set</strong>
+                                    </div>
+                                </td>
+                                <td>Basic Tools</td>
+                                <td>3,500</td>
+                                <td>45</td>
+                                <td><span class="status-badge status-stock">In Stock</span></td>
+                                <td>
+                                    <div class="action-btns">
+                                        <button class="action-btn"><i class="fas fa-pen"></i></button>
+                                        <button class="action-btn"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="product-cell">
+                                        <img src="../assets/images/prod_3.png" alt="Scale">
+                                        <strong>Digital Kitchen Scale</strong>
+                                    </div>
+                                </td>
+                                <td>Pro Essentials</td>
+                                <td>4,500</td>
+                                <td>5</td>
+                                <td><span class="status-badge status-low">Low Stock</span></td>
+                                <td>
+                                    <div class="action-btns">
+                                        <button class="action-btn"><i class="fas fa-pen"></i></button>
+                                        <button class="action-btn"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="product-cell">
+                                        <img src="../assets/images/prod_4.png" alt="Piping Kit">
+                                        <strong>50-Pc Piping Nozzle Kit</strong>
+                                    </div>
+                                </td>
+                                <td>Decorating</td>
+                                <td>5,200</td>
+                                <td>120</td>
+                                <td><span class="status-badge status-stock">In Stock</span></td>
+                                <td>
+                                    <div class="action-btns">
+                                        <button class="action-btn"><i class="fas fa-pen"></i></button>
+                                        <button class="action-btn"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="product-cell">
+                                        <img src="../assets/images/prod_2.png" alt="Pan">
+                                        <strong>Non-stick Springform Pan</strong>
+                                    </div>
+                                </td>
+                                <td>Basic Tools</td>
+                                <td>2,800</td>
+                                <td>32</td>
+                                <td><span class="status-badge status-stock">In Stock</span></td>
+                                <td>
+                                    <div class="action-btns">
+                                        <button class="action-btn"><i class="fas fa-pen"></i></button>
+                                        <button class="action-btn"><i class="fas fa-trash"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add Product Modal -->
+    <div class="modal-overlay" id="addProductModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Product</h3>
+                <button class="close-modal" id="closeModalBtn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <form id="addProductForm">
+                    <div class="upload-area">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Click to upload product image</p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Product Name</label>
+                        <input type="text" placeholder="e.g. Professional Stand Mixer" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select style="width: 100%; padding: 14px 20px; border: 1px solid var(--border); border-radius: var(--radius-md); font-family: var(--font-body); outline: none;">
+                                <option>Basic Tools</option>
+                                <option>Decorating & Finishing</option>
+                                <option>Pro Essentials</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Price (Rs)</label>
+                            <input type="number" placeholder="0.00" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Initial Stock Level</label>
+                            <input type="number" placeholder="10" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Status</label>
+                            <select style="width: 100%; padding: 14px 20px; border: 1px solid var(--border); border-radius: var(--radius-md); font-family: var(--font-body); outline: none;">
+                                <option>Active (Visible)</option>
+                                <option>Draft (Hidden)</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" id="cancelBtn">Cancel</button>
+                <button class="btn btn-primary" onclick="alert('Product Added Successfully!'); document.getElementById('addProductModal').classList.remove('active');">Save Product</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Modal Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('addProductModal');
+            const openBtn = document.getElementById('openAddProductModal');
+            const closeBtn = document.getElementById('closeModalBtn');
+            const cancelBtn = document.getElementById('cancelBtn');
+
+            openBtn.addEventListener('click', () => {
+                modal.classList.add('active');
+            });
+
+            closeBtn.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+
+            cancelBtn.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+
+            // Close when clicking outside
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

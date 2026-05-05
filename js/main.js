@@ -129,15 +129,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.style.backgroundColor = '#4CAF50';
                 this.style.borderColor = '#4CAF50';
                 
-                // Update badge
-                cartCount++;
-                cartBadge.innerText = cartCount;
-                
-                // Add pop animation to badge
-                cartBadge.style.transform = 'scale(1.5)';
-                setTimeout(() => {
-                    cartBadge.style.transform = 'scale(1)';
-                }, 300);
+                // Update badge if exists
+                if (cartBadge) {
+                    cartCount++;
+                    cartBadge.innerText = cartCount;
+                    
+                    // Add pop animation to badge
+                    cartBadge.style.transform = 'scale(1.5)';
+                    setTimeout(() => {
+                        cartBadge.style.transform = 'scale(1)';
+                    }, 300);
+                }
                 
                 // Reset button after 2s
                 setTimeout(() => {

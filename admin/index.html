@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | CakeCraft Admin</title>
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Admin Specific Styles -->
+    <link rel="stylesheet" href="css/admin.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js for Demo Charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="logo">
+                <i class="fas fa-birthday-cake"></i> Cake<span>Admin</span>
+            </a>
+        </div>
+        <div class="sidebar-menu">
+            <a href="index.html" class="menu-item active">
+                <i class="fas fa-home"></i> Dashboard
+            </a>
+            <a href="products.html" class="menu-item">
+                <i class="fas fa-box-open"></i> Products
+            </a>
+            <a href="#" class="menu-item">
+                <i class="fas fa-shopping-bag"></i> Orders
+            </a>
+            <a href="#" class="menu-item">
+                <i class="fas fa-users"></i> Customers
+            </a>
+            <a href="#" class="menu-item" style="margin-top: 40px;">
+                <i class="fas fa-cog"></i> Settings
+            </a>
+            <a href="../login.html" class="menu-item">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Topbar -->
+        <header class="topbar">
+            <div class="search-bar">
+                <i class="fas fa-search text-muted"></i>
+                <input type="text" placeholder="Search orders, products...">
+            </div>
+            <div class="topbar-actions">
+                <button class="icon-btn" aria-label="Notifications">
+                    <i class="far fa-bell"></i>
+                    <span class="cart-badge" style="top: 0; right: 0;">3</span>
+                </button>
+                <div class="profile-circle">A</div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">Overview</h1>
+                    <p style="color: var(--text-muted);">Welcome back, Admin. Here is what's happening today.</p>
+                </div>
+                <button class="btn btn-primary"><i class="fas fa-download"></i> Export Report</button>
+            </div>
+
+            <!-- Stat Cards -->
+            <div class="stats-grid">
+                <div class="admin-card fade-up">
+                    <div class="stat-header">
+                        <span>Total Revenue</span>
+                        <div class="stat-icon"><i class="fas fa-wallet"></i></div>
+                    </div>
+                    <div class="stat-value">Rs. 145,000</div>
+                    <div class="stat-trend"><i class="fas fa-arrow-up"></i> +12.5% this week</div>
+                </div>
+                <div class="admin-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="stat-header">
+                        <span>Total Orders</span>
+                        <div class="stat-icon"><i class="fas fa-shopping-bag"></i></div>
+                    </div>
+                    <div class="stat-value">342</div>
+                    <div class="stat-trend"><i class="fas fa-arrow-up"></i> +5.2% this week</div>
+                </div>
+                <div class="admin-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="stat-header">
+                        <span>Active Products</span>
+                        <div class="stat-icon"><i class="fas fa-box"></i></div>
+                    </div>
+                    <div class="stat-value">48</div>
+                    <div class="stat-trend" style="color: var(--text-muted);"><i class="fas fa-minus"></i> No change</div>
+                </div>
+                <div class="admin-card fade-up" style="transition-delay: 0.3s;">
+                    <div class="stat-header">
+                        <span>New Customers</span>
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    </div>
+                    <div class="stat-value">124</div>
+                    <div class="stat-trend"><i class="fas fa-arrow-up"></i> +18.4% this week</div>
+                </div>
+            </div>
+
+            <!-- Charts and Tables -->
+            <div class="dashboard-grid">
+                <!-- Sales Chart -->
+                <div class="admin-card fade-up">
+                    <h3 style="margin-bottom: 20px;">Weekly Sales Overview</h3>
+                    <div class="chart-container">
+                        <canvas id="salesChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Recent Orders -->
+                <div class="admin-card fade-up" style="transition-delay: 0.1s;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h3>Recent Orders</h3>
+                        <a href="#" style="color: var(--primary); font-weight: 500;">View All</a>
+                    </div>
+                    <div class="table-container">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Status</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>#ORD-092</strong><br><small style="color: var(--text-muted);">Sandaru Fx</small></td>
+                                    <td><span class="status-badge status-pending">Pending</span></td>
+                                    <td>Rs. 4,500</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>#ORD-091</strong><br><small style="color: var(--text-muted);">Kamal Perera</small></td>
+                                    <td><span class="status-badge status-completed">Delivered</span></td>
+                                    <td>Rs. 12,800</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>#ORD-090</strong><br><small style="color: var(--text-muted);">Nimali S.</small></td>
+                                    <td><span class="status-badge status-completed">Delivered</span></td>
+                                    <td>Rs. 3,500</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>#ORD-089</strong><br><small style="color: var(--text-muted);">Bakery Hub</small></td>
+                                    <td><span class="status-badge status-completed">Delivered</span></td>
+                                    <td>Rs. 45,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Initialize Chart.js
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('salesChart').getContext('2d');
+            
+            // Getting colors from CSS variables
+            const style = getComputedStyle(document.body);
+            const primaryColor = style.getPropertyValue('--primary').trim() || '#D98C82';
+            const accentColor = style.getPropertyValue('--accent').trim() || '#F2D5D0';
+
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    datasets: [{
+                        label: 'Sales (Rs)',
+                        data: [12000, 19000, 15000, 25000, 22000, 30000, 28000],
+                        borderColor: primaryColor,
+                        backgroundColor: accentColor,
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: '#E8DFD8', drawBorder: false }
+                        },
+                        x: {
+                            grid: { display: false, drawBorder: false }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

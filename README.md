@@ -1,19 +1,29 @@
-# 🎂 CakeCraft Tools Shop
+# 🎂 CakeCraft Tools Shop (React + Vite)
 
-A premium, modern, glassmorphism UI for a Cake Baking Tools e-commerce landing page. 
-Built as a demo UI to showcase design capabilities.
+Premium UI cake tools shop with a modern public storefront and an admin dashboard.
 
 ## Features
-- ✨ Modern, responsive UI with CSS Grid and Flexbox
-- 🎨 Premium color palette (Rose gold, warm cream, chocolate)
-- 🌙 Dark / Light mode toggle
-- 🎭 Scroll reveal animations & counter animations
-- 🛍️ Interactive product cards (Add to cart, Wishlist)
+- **Public site**: Home, Shop, Product details, Cart, About, Contact
+- **Premium UI**: design tokens, subtle motion, dark/light mode, accessible focus states
+- **Admin dashboard** (`/admin`)
+  - Products CRUD (localStorage)
+  - Orders list + status updates (localStorage)
+  - API / Integrations settings (WhatsApp number, placeholders for API/webhooks)
 
 ## Tech Stack
-- Vanilla HTML5
-- Vanilla CSS3 (Custom properties, animations)
-- Vanilla JavaScript (Intersection Observer API, LocalStorage)
+- React + Vite
+- React Router
+- React Icons
 
-## How to run
-Simply open `index.html` in your web browser. No backend required!
+## Run locally
+```bash
+npm install
+npm run dev
+```
+
+## Routes
+- Public: `/`, `/products`, `/product/:id`, `/cart`, `/about`, `/contact`
+- Admin: `/admin`, `/admin/products`, `/admin/orders`, `/admin/api`
+
+## Notes
+- Admin data is stored in **localStorage** (demo mode). You can connect a real backend later.
